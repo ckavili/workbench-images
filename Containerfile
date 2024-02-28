@@ -1,6 +1,4 @@
-FROM quay.io/modh/cuda-notebooks:cuda-jupyter-tensorflow-ubi8-python-3.8-2023a-20231030-3e71410	
-
-RUN pip install pip==22.3.1 setuptools==65.3.0
+FROM quay.io/modh/cuda-notebooks@sha256:d39aa8d91224f2c9265c18036149fbc8d3439f22ed7554f717752b0828494b7d
 
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt && \
