@@ -2,7 +2,6 @@ FROM quay.io/modh/cuda-notebooks@sha256:d39aa8d91224f2c9265c18036149fbc8d3439f22
 
 USER 0
 
-# Install gzip to extract archives
 RUN dnf install -y graphviz && \
     dnf clean all
 
