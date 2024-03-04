@@ -2,7 +2,8 @@ FROM quay.io/modh/cuda-notebooks@sha256:d39aa8d91224f2c9265c18036149fbc8d3439f22
 
 USER 0
 
-RUN dnf install -y python3-pygraphviz && \
+RUN curl -L https://rpmfind.net/linux/centos-stream/9-stream/AppStream/x86_64/os/Packages/graphviz-2.44.0-26.el9.x86_64.rpm -o graphviz-2.44.0-26.el9.x86_64.rpm && \
+    dnf install -y graphviz-2.44.0-26.el9.x86_64.rpm && \
     dnf clean all
 
 USER 1001 
